@@ -1,0 +1,48 @@
+#map {
+  height: 500px;
+  position: relative;
+  width: 40%;
+  padding-left: 80px;
+
+}
+
+#ulastext {
+
+  text-align: center;
+  font-size: 400%;
+}
+
+.titlecom {
+text-align: center;
+}
+
+.bil {
+
+}
+
+#iletisim {
+
+width: 300px;
+height: 150px;
+margin-right: 220px;
+margin-top: 80px;
+
+
+}
+
+.mapall {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#selam {
+  text-align: center;
+
+  font-size: 500%;
+}
+
+.eve {
+  background-color: #74e3fc;
+  height: 500px;
+}

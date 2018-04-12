@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Team Info</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="mystyles.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBHGDFQ1PdvKtIn_vxL99HewbX5AzgaIGI",
+      authDomain: "frcscouting-9a446.firebaseapp.com",
+      databaseURL: "https://frcscouting-9a446.firebaseio.com",
+      projectId: "frcscouting-9a446",
+      storageBucket: "frcscouting-9a446.appspot.com",
+      messagingSenderId: "618810421812"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title" id="">Team Info</span>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#fixed-tab-1" class="mdl-layout__tab is-active" id="teamNoDisplay"></a>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12">
+              <h4 id="d1">Team Name</h4>
+              <h4 id="d2">Team No</h4>
+              <h4 id="d3"></h4>
+              <hr>
+              <h4 >Pit Survey (1 - Worst, 5 - Best)</h4>
+              <h5 id="d4">Intake</h5>
+              <h5 id="d5">Switch</h5>
+              <h5 id="d6">Scale</h5>
+              <h5 id="d7">Climbing</h5>
+              <hr>
+              <h4>Autonomous (0 - Can't, 1 - Can)</h4>
+              <h5 id="d8">Auto-Run</h5>
+              <h5 id="d9">Switch</h5>
+              <h5 id="d10">Scale</h5>
+              <hr>
+              <h4>Additional Comments</h4>
+              <p id="d11">Additional Comments</p>
+              <hr>
+              <h4>Team Data from Matches</h4>
+              <h5 id="d12">Cubes on vault</h5>
+              <h5 id="d13">cubes on scale</h5>
+              <h5 id="d14">Cubes on Team Switch</h5>
+              <h5 id="d15">Cubes on Opponent Switch</h5>
+              <h5 id="d16">Climb percentile</h5>
+              <div class="" id="d17">
+                <h5>Robot Faults</h5>
+              </div><br>
+              <h5 id="d18">Qualification Points</h5>
+              <h5 id="d19">Ranking Points</h5>
+              <h5 id="d20">Park Points</h5>
+              <h5 id="d21">Autonomous points</h5>
+              <h5 id="d22">Ownership Points</h5>
+              <h5 id="d23">Vault Points</h5>
+            </div>
+          </div>
+        </div>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent bBtnLeft" id="back">
+          Back
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored bBtnRight" id="editTeam">
+          Edit
+        </button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+
+
+  <script type="text/javascript" src="teamInfo.js">
+  </script>
+  </body>
+</html>

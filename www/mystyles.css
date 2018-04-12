@@ -1,0 +1,85 @@
+#wMsg {
+
+}
+
+.bBtn {
+  position:fixed;
+  bottom:0;
+  width: 100%;
+}
+
+.bBtnLeft {
+
+  bottom:0;
+  width: 50%;
+  float: left;
+  position:fixed;
+}
+
+.bBtnRight {
+
+  bottom:0;
+  width: 50%;
+  float: right;
+  position:fixed;
+  margin-left: 50%;
+}
+
+.delBtns {
+  float: right;
+  display: inline-block;
+}
+
+.eventDisplayer {
+  display: inline-block;
+  width: 100%;
+}
+
+.newEventName {
+  float: left;
+  display: inline-block;
+  font-size: 250%;
+}
+
+.mySep {
+  width: 100%;
+  opacity: 0.7;
+}
+
+.newTeamName {
+  float: left;
+  display: inline-block;
+  font-size: 200%;
+}
+
+.asdf {
+  display: inline-block;
+  width: 100%;
+}
+
+.ghjk {
+  width: 100%;
+  z-index: 0;
+}
+
+.card-header {
+  padding: 0px;
+}
+
+.coveral {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  margin-left: 20px;
+}
+
+.bBtnAll {
+  bottom:0;
+  width: 100%;
+  float: right;
+  position:fixed;
+}
+#res {
+  width: 100%;
+  text-align: center;
+}

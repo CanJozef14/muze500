@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="shortcut icon" type="logo.png" href="/favicon.png"/>
+
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="mystyles.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBHGDFQ1PdvKtIn_vxL99HewbX5AzgaIGI",
+      authDomain: "frcscouting-9a446.firebaseapp.com",
+      databaseURL: "https://frcscouting-9a446.firebaseio.com",
+      projectId: "frcscouting-9a446",
+      storageBucket: "frcscouting-9a446.appspot.com",
+      messagingSenderId: "618810421812"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title" id="wMsg">Type in new match data</span>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">New Match</a>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><br>
+            <form class="" action="index.html" method="post">
+              <div class="form-group">
+                <label for="matchNo">Match Number</label>
+                <input type="text" name="" value="" id="matchNo" placeholder="match number" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="matchT">Type</label>
+                <select class="form-control" id="matchT" name="">
+                  <option value="">Qualification</option>
+                  <option value="">Playoff</option>
+                  <option value="">Practice</option>
+
+                </select>
+              </div>
+            </form>
+            <hr>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h3 style="text-align: center">Red</h3>
+
+
+
+
+
+<div id="accordion">
+
+
+
+
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwoTwoss" aria-expanded="false" aria-controls="collapseTwo">
+          Alliance
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwoTwoss" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+
+      <div class="card-body">
+        <form class="" action="index.html" method="post">
+          <div class="form-group">
+            <label for="points">Total Points</label>
+            <input type="text" name="" value="" class="form-control" placeholder="Total Points" id="points">
+          </div>
+
+
+
+          <div class="form-group">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="won">
+              <input type="checkbox" id="won" class="mdl-radio__button" name="res" value="1">
+              <span class="mdl-radio__label">Won</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="qualpoints">Qualification Points</label>
+            <input type="number" name="" value="" id="qualpoints" placeholder="qualification points" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="rankingpoints">Ranking Points</label>
+            <input type="number" name="" value="" id="rankingpoints" placeholder="ranking points" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="parkclimbpoints">Park/Climb Points</label>
+            <input type="number" name="" value="" id="parkclimbpoints" placeholder="park points" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="autopoints">Autonomous Points</label>
+            <input type="number" name="" value="" id="autopoints" placeholder="autonomous points" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="ownerpoints">Ownership Points</label>
+            <input type="number" name="" value="" id="ownerpoints" placeholder="ownership points" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="vaultpoints">Vault Points</label>
+            <input type="number" name="" value="" id="vaultpoints" placeholder="vault points" class="form-control" required>
+          </div>
+
+
+
+        </form>
+      </div>
+
+    </div>
+  </div><br>
+
+
+
+
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Team #1
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <form class="" action="index.html" method="post">
+          <div class="form-group">
+            <label for="teamNo">Team Number</label>
+            <input type="text" name="" value="" class="form-control" placeholder="team number" id="teamNo" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cbase">Cubes delivered to vault</label>
+            <input type="number" name="" value="" class="form-control" id="cbase"  placeholder="Cubes delivered to vault" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cscale">Cubes on Scale</label>
+            <input type="number" name="" value="" class="form-control" id="cscale"  placeholder="Cubes on Scale" required>
+          </div>
+
+          <div class="form-group">
+            <label for="ctswitch">Cubes on Team Switch</label>
+            <input type="number" name="" value="" class="form-control" id="ctswitch"  placeholder="Cubes on Team Switch" required>
+          </div>
+
+          <div class="form-group">
+            <label for="coswitch">Cubes on Opponent Switch</label>
+            <input type="number" name="" value="" class="form-control" id="coswitch"  placeholder="Cubes on Opponent Switch" required>
+          </div>
+
+          <div class="form-group">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="yes">
+              <input type="radio" id="yes" class="mdl-radio__button" name="options" value="1" checked>
+              <span class="mdl-radio__label">Can Climb</span>
+            </label>
+            <br>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="no">
+              <input type="radio" id="no" class="mdl-radio__button" name="options" value="2">
+              <span class="mdl-radio__label">Can't Climb</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="faults">Robot Faults</label>
+            <input type="text" name="" value="" id="faults" placeholder="robot faults" class="form-control" required>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Team #2
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+
+      <div class="card-body">
+        <form class="" action="index.html" method="post">
+          <div class="form-group">
+            <label for="teamNo1">Team Number</label>
+            <input type="text" name="" value="" class="form-control" placeholder="team number" id="teamNo1" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cbase1">Cubes Delivered to Vault</label>
+            <input type="number" name="" value="" class="form-control" id="cbase1"  placeholder="Cubes delivered to vault" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cscale1">Cubes on Scale</label>
+            <input type="number" name="" value="" class="form-control" id="cscale1"  placeholder="Cubes on Scale" required>
+          </div>
+
+          <div class="form-group">
+            <label for="ctswitch1">Cubes on Team Switch</label>
+            <input type="number" name="" value="" class="form-control" id="ctswitch1"  placeholder="Cubes on Team Switch" required>
+          </div>
+
+          <div class="form-group">
+            <label for="coswitch1">Cubes on Opponent Switch</label>
+            <input type="number" name="" value="" class="form-control" id="coswitch1"  placeholder="Cubes on Opponent Switch" required>
+          </div>
+
+          <div class="form-group">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="yes1">
+              <input type="radio" id="yes1" class="mdl-radio__button" name="opdtions" value="1" checked>
+              <span class="mdl-radio__label">Can Climb</span>
+            </label>
+            <br>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="no1">
+              <input type="radio" id="no1" class="mdl-radio__button" name="opdtions" value="2">
+              <span class="mdl-radio__label">Can't Climb</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="faults1">Robot Faults</label>
+            <input type="text" name="" value="" id="faults1" placeholder="robot faults" class="form-control" required>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div><br>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Team #3
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+
+      <div class="card-body">
+        <form class="" action="index.html" method="post">
+          <div class="form-group">
+            <label for="teamNo2">Team Number</label>
+            <input type="text" name="" value="" class="form-control" placeholder="team number" id="teamNo2" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cbase2">Cubes delivered to vault</label>
+            <input type="number" name="" value="" class="form-control"id="cbase2"  placeholder="Cubes delivered to vault" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cscale2">Cubes on Scale</label>
+            <input type="number" name="" value="" class="form-control" id="cscale2"  placeholder="Cubes on Scale" required>
+          </div>
+
+          <div class="form-group">
+            <label for="ctswitch2">Cubes on Team Switch</label>
+            <input type="number" name="" value="" class="form-control" id="ctswitch2"  placeholder="Cubes on Team Switch" required>
+          </div>
+
+          <div class="form-group">
+            <label for="coswitch2">Cubes on Opponent Switch</label>
+            <input type="number" name="" value="" class="form-control" id="coswitch2"  placeholder="Cubes on Opponent Switch" required>
+          </div>
+
+          <div class="form-group">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="yes2">
+              <input type="radio" id="yes2" class="mdl-radio__button" name="aoptions" value="1" checked>
+              <span class="mdl-radio__label">Can Climb</span>
+            </label>
+            <br>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="no2">
+              <input type="radio" id="no2" class="mdl-radio__button" name="aoptions" value="2">
+              <span class="mdl-radio__label">Can't Climb</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="faults2">Robot Faults</label>
+            <input type="text" name="" value="" id="faults2" placeholder="robot faults" class="form-control" required>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div><br><br><br>
+</div>
+
+
+
+
+
+
+          </div>
+          <div class="col-6">
+            <h3 style="text-align: center">Blue</h3>
+
+
+
+
+            <div id="accordion">
+
+
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwoTwoaa" aria-expanded="false" aria-controls="collapseTwo">
+                      Alliance
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwoTwoaa" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+
+                  <div class="card-body">
+                    <form class="" action="index.html" method="post">
+                      <div class="form-group">
+                        <label for="points_1">Total Points</label>
+                        <input type="text" name="" value="" class="form-control" placeholder="Total Points" id="points_1" required>
+                      </div>
+
+
+
+
+                      <div class="form-group">
+                        <label for="qualpoints_1">Qualification Points</label>
+                        <input type="number" name="" value="" id="qualpoints_1" placeholder="qualification points" class="form-control" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="rankingpoints_1">Ranking Points</label>
+                        <input type="number" name="" value="" id="rankingpoints_1" placeholder="ranking points" class="form-control" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="parkclimbpoints_1">Park/Climb Points</label>
+                        <input type="number" name="" value="" id="parkclimbpoints_1" placeholder="park points" class="form-control" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="autopoints_1">Autonomous Points</label>
+                        <input type="number" name="" value="" id="autopoints_1" placeholder="autonomous points" class="form-control" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="ownerpoints_1">Ownership Points</label>
+                        <input type="number" name="" value="" id="ownerpoints_1" placeholder="ownership points" class="form-control" required>
+                      </div>
+
+                      <div class="form-group_1">
+                        <label for="vaultpoints">Vault Points</label>
+                        <input type="number" name="" value="" id="vaultpoints_1" placeholder="vault points" class="form-control" required>
+                      </div>
+
+                    </form>
+                  </div>
+
+                </div>
+              </div><br>
+
+
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOneTwo" aria-expanded="true" aria-controls="collapseOne">
+                      Team #1
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseOneTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    <form class="" action="index.html" method="post">
+                      <div class="form-group">
+                        <label for="teamNo_1">Team Number</label>
+                        <input type="text" name="" value="" class="form-control" placeholder="team number" id="teamNo_1" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="cbase_1">Cubes delivered to vault</label>
+                        <input type="number" name="" value="" class="form-control" id="cbase_1"  placeholder="Cubes delivered to vault" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="cscale_1">Cubes on Scale</label>
+                        <input type="number" name="" value="" class="form-control" id="cscale_1"  placeholder="Cubes on Scale" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="ctswitch_1">Cubes on Team Switch</label>
+                        <input type="number" name="" value="" class="form-control" id="ctswitch_1"  placeholder="Cubes on Team Switch" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="coswitch_1">Cubes on Opponent Switch</label>
+                        <input type="number" name="" value="" class="form-control" id="coswitch_1"  placeholder="Cubes on Opponent Switch" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="yes_1">
+                          <input type="radio" id="yes_1" class="mdl-radio__button" name="options" value="1" checked>
+                          <span class="mdl-radio__label">Can Climb</span>
+                        </label>
+                        <br>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="no_1">
+                          <input type="radio" id="no_1" class="mdl-radio__button" name="options" value="2">
+                          <span class="mdl-radio__label">Can't Climb</span>
+                        </label>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="faults_1">Robot Faults</label>
+                        <input type="text" name="" value="" id="faults_1" placeholder="robot faults" class="form-control" required>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div><br>
+
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwoTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Team #2
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwoTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+
+                  <div class="card-body">
+                    <form class="" action="index.html" method="post">
+                      <div class="form-group">
+                        <label for="teamNo1_1">Team Number</label>
+                        <input type="text" name="" value="" class="form-control" placeholder="team number" id="teamNo1_1" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="cbase1_1">Cubes delivered to vault</label>
+                        <input type="number" name="" value="" class="form-control" id="cbase1_1"  placeholder="Cubes delivered to vault" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="cscale1_1">Cubes on Scale</label>
+                        <input type="number" name="" value="" class="form-control" id="cscale1_1"  placeholder="Cubes on Scale" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="ctswitch1_1">Cubes on Team Switch</label>
+                        <input type="number" name="" value="" class="form-control" id="ctswitch1_1"  placeholder="Cubes on Team Switch" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="coswitch1_1">Cubes on Opponent Switch</label>
+                        <input type="number" name="" value="" class="form-control" id="coswitch1_1"  placeholder="Cubes on Opponent Switch" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="yes1_1">
+                          <input type="radio" id="yes1_1" class="mdl-radio__button" name="opdtions" value="1" checked>
+                          <span class="mdl-radio__label">Can Climb</span>
+                        </label>
+                        <br>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="no1_1">
+                          <input type="radio" id="no1_1" class="mdl-radio__button" name="opdtions" value="2">
+                          <span class="mdl-radio__label">Can't Climb</span>
+                        </label>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="faults_1">Robot Faults</label>
+                        <input type="text" name="" value="" id="faults1_1" placeholder="robot faults" class="form-control" required>
+                      </div>
+                    </form>
+                  </div>
+
+                </div>
+              </div><br>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThreeTwo" aria-expanded="false" aria-controls="collapseThreeTwo">
+                      Team #3
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThreeTwo" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+
+                  <div class="card-body">
+                    <form class="" action="index.html" method="post">
+                      <div class="form-group">
+                        <label for="teamNo2_1">Team Number</label>
+                        <input type="text" name="" value="" class="form-control" placeholder="team number" id="teamNo2_1" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="cbase2_1">Cubes delivered to vault</label>
+                        <input type="number" name="" value="" class="form-control"id="cbase2_1"  placeholder="Cubes delivered to vault" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="cscale2_1">Cubes on Scale</label>
+                        <input type="number" name="" value="" class="form-control" id="cscale2_1"  placeholder="Cubes on Scale" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="ctswitch2_1">Cubes on Team Switch</label>
+                        <input type="number" name="" value="" class="form-control" id="ctswitch2_1"  placeholder="Cubes on Team Switch" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="coswitch2_1">Cubes on Opponent Switch</label>
+                        <input type="number" name="" value="" class="form-control" id="coswitch2_1"  placeholder="Cubes on Opponent Switch" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="yes2_1">
+                          <input type="radio" id="yes2_1" class="mdl-radio__button" name="aoptions" value="1" checked>
+                          <span class="mdl-radio__label">Can Climb</span>
+                        </label>
+                        <br>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="no2_1">
+                          <input type="radio" id="no2_1" class="mdl-radio__button" name="aoptions" value="2">
+                          <span class="mdl-radio__label">Can't Climb</span>
+                        </label>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="faults2_1">Robot Faults</label>
+                        <input type="text" name="" value="" id="faults2_1" placeholder="robot faults" class="form-control" required>
+                      </div>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><br><br><br>
+      <p id="res"></p><br><br>
+
+      <div class="page-content">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent bBtnLeft" id="back">
+          Back
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored bBtnRight" id="save">
+          Add Match
+        </button>
+      </div>
+    </section>
+  </main>
+</div>
+
+
+
+  <script type="text/javascript" src="matchCreator.js">
+  </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Login/SignUp</title>
+    <link rel="icon" type="image/png" href="favicon.ico">
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBHGDFQ1PdvKtIn_vxL99HewbX5AzgaIGI",
+      authDomain: "frcscouting-9a446.firebaseapp.com",
+      databaseURL: "https://frcscouting-9a446.firebaseio.com",
+      projectId: "frcscouting-9a446",
+      storageBucket: "frcscouting-9a446.appspot.com",
+      messagingSenderId: "618810421812"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>FRC Scouting App</h3>
+        <form action="index.html" method="post">
+          <div class="form-group">
+            <label for="teamNo">Team Number</label>
+            <input type="text" name="" value="" id="teamNo" class="form-control" placeholder="Type in your team#">
+          </div>
+          <div class="form-group">
+            <label for="emai">Type in the team email</label>
+            <input type="email" name="" value="" id="email" class="form-control" placeholder="E-mail">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="" value="" class="form-control" id="password" placeholder="Password">
+          </div>
+        </form>
+        <button type="button" name="button" class="btn btn-md btn-success" id="login">Login</button>
+        <button type="button" name="button" class="btn btn-md btn-primary" id="signup">Sign Up</button><br><br>
+        <div class="alert alert-danger hidden" id="loginAlert">
+          <p id="loginErr"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="app.js">
+  </script>
+  </body>
+</html>

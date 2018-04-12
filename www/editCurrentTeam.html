@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Edit team</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="mystyles.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBHGDFQ1PdvKtIn_vxL99HewbX5AzgaIGI",
+      authDomain: "frcscouting-9a446.firebaseapp.com",
+      databaseURL: "https://frcscouting-9a446.firebaseio.com",
+      projectId: "frcscouting-9a446",
+      storageBucket: "frcscouting-9a446.appspot.com",
+      messagingSenderId: "618810421812"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title" id="">Team Editing Page</span>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#fixed-tab-1" class="mdl-layout__tab is-active" id="wMsg"></a>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 ghjk">
+              <br>
+              <form action="index.html" method="post">
+                <div class="form-group">
+                  <label for="teamName">Name</label>
+                  <input type="text" name="" value="" id="teamName" placeholder="Team Name" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="teamNo">Team Number</label>
+                  <input type="text" name="" value="" id="teamNo" class="form-control" placeholder="team no.">
+                </div>
+                <hr>
+                <h4>Quality</h4>
+                <h5>Intake</h5>
+                <div class="form-group asdf">
+                  <span class="mdl-radio__label">Worst</span>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt1">
+                    <input type="radio" id="opt1" class="mdl-radio__button" name="options" value="1">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt2">
+                    <input type="radio" id="opt2" class="mdl-radio__button" name="options" value="2">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt3">
+                    <input type="radio" id="opt3" class="mdl-radio__button" name="options" value="3">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt4">
+                    <input type="radio" id="opt4" class="mdl-radio__button" name="options" value="4">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt5">
+                    <input type="radio" id="opt5" class="mdl-radio__button" name="options" value="5">
+                  </label>
+                  <span class="mdl-radio__label">Best</span>
+                </div>
+                <h5>Switch</h5>
+                <div class="form-group asdf">
+                  <span class="mdl-radio__label">Worst</span>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt1_2">
+                    <input type="radio" id="opt1_2" class="mdl-radio__button" name="as" value="1">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt2_2">
+                    <input type="radio" id="opt2_2" class="mdl-radio__button" name="as" value="2">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt3_2">
+                    <input type="radio" id="opt3_2" class="mdl-radio__button" name="as" value="3">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt4_2">
+                    <input type="radio" id="opt4_2" class="mdl-radio__button" name="as" value="4">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt5_2">
+                    <input type="radio" id="opt5_2" class="mdl-radio__button" name="as" value="5">
+                  </label>
+                  <span class="mdl-radio__label">Best</span>
+                </div>
+                <h5>Scale</h5>
+                <div class="form-group asdf">
+                  <span class="mdl-radio__label">Worst</span>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt1_3">
+                    <input type="radio" id="opt1_3" class="mdl-radio__button" name="df" value="1">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt2_3">
+                    <input type="radio" id="opt2_3" class="mdl-radio__button" name="df" value="2">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt3_3">
+                    <input type="radio" id="opt3_3" class="mdl-radio__button" name="df" value="3">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt4_3">
+                    <input type="radio" id="opt4_3" class="mdl-radio__button" name="df" value="4">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt5_3">
+                    <input type="radio" id="opt5_3" class="mdl-radio__button" name="df" value="5">
+                  </label>
+                  <span class="mdl-radio__label">Best</span>
+                </div>
+                <h5>Climbing</h5>
+                <div class="form-group asdf">
+                  <span class="mdl-radio__label">Worst</span>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt1_4">
+                    <input type="radio" id="opt1_4" class="mdl-radio__button" name="gh" value="1">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt2_4">
+                    <input type="radio" id="opt2_4" class="mdl-radio__button" name="gh" value="2">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt3_4">
+                    <input type="radio" id="opt3_4" class="mdl-radio__button" name="gh" value="3">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt4_4">
+                    <input type="radio" id="opt4_4" class="mdl-radio__button" name="gh" value="4">
+                  </label>
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="opt5_4">
+                    <input type="radio" id="opt5_4" class="mdl-radio__button" name="gh" value="5">
+                  </label>
+                  <span class="mdl-radio__label">Best</span>
+                </div>
+                <hr>
+                <h4>Autonomous</h4>
+                <div class="form-group">
+                  <label for="autorun">
+                    <input type="checkbox" id="autorun" class="">
+                    <span class="mdl-checkbox__label">Auto-Run</span>
+                  </label><br>
+                  <label  for="switch">
+                    <input type="checkbox" id="switch" >
+                    <span class="mdl-checkbox__label">Switch</span>
+                  </label><br>
+                  <label  for="scale">
+                    <input type="checkbox" id="scale" class="">
+                    <span class="mdl-checkbox__label">Scale</span>
+                  </label>
+                </div>
+                <hr>
+                <h4>Additional Comments</h4>
+                <div class="form-group">
+                  <label for="adcom">Additional Comments</label><br>
+                  <input type="text" name="" value="" id="adcom" class="form-control" placeholder="additional comments">
+                </div><br><br>
+
+
+              </form>
+            </div>
+          </div>
+        </div>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent bBtnLeft" id="goBack">
+          Back
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored bBtnRight" id="saveData">
+          Save
+        </button>
+      </div>
+    </section>
+  </main>
+</div>
+
+  <script type="text/javascript" src="editCurrentTeam.js">
+
+  </script>
+  </body>
+</html>

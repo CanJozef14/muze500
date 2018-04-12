@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Match Info</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="mystyles.css">
+    <link rel="shortcut icon" type="logo.png" href="/favicon.png"/>
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBHGDFQ1PdvKtIn_vxL99HewbX5AzgaIGI",
+      authDomain: "frcscouting-9a446.firebaseapp.com",
+      databaseURL: "https://frcscouting-9a446.firebaseio.com",
+      projectId: "frcscouting-9a446",
+      storageBucket: "frcscouting-9a446.appspot.com",
+      messagingSenderId: "618810421812"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title" id="">Match Info</span>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#fixed-tab-1" class="mdl-layout__tab is-active" id="matchNoTypeDisplay"></a>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <h3 style="text-align: center">Match details</h3>
+            <div class="col-xs-6">
+              <h2 style="text-align:center">Red Alliance</h2>
+              <h4>Alliance Information</h4>
+              <h5 id="d1">Total points</h5>
+              <h5 id="d2">Qualification points</h5>
+              <h5 id="d3">Ranking points</h5>
+              <h5 id="d4">Park/climbing points</h5>
+              <h5 id="d5">Autonomous points</h5>
+              <h5 id="d6">Ownership Points</h5>
+              <h5 id="d7">Vault Points</h5>
+              <h4>Team Info</h4>
+              <h5 id="d8">Team1No</h5>
+              <h5 id="d9">Cubes Delivered to Vault</h5>
+              <h5 id="d10">Cubes on Scale</h5>
+              <h5 id="d11">Cubes on Team Switch</h5>
+              <h5 id="d12">Cubes on opponent Switch</h5>
+              <h5 id="d13">Climb Status</h5>
+              <h5 id="d14">Robot Faults</h5>
+              <hr>
+              <h5 id="d15">Team2No</h5>
+              <h5 id="d16">Cubes Delivered to Vault</h5>
+              <h5 id="d17">Cubes on Scale</h5>
+              <h5 id="d18">Cubes on Team Switch</h5>
+              <h5 id="d19">Cubes on opponent Switch</h5>
+              <h5 id="d20">Climb Status</h5>
+              <h5 id="d21">Robot Faults</h5>
+              <hr>
+              <h5 id="d22">Team3No</h5>
+              <h5 id="d23">Cubes Delivered to Vault</h5>
+              <h5 id="d24">Cubes on Scale</h5>
+              <h5 id="d25">Cubes on Team Switch</h5>
+              <h5 id="d26">Cubes on opponent Switch</h5>
+              <h5 id="d27">Climb Status</h5>
+              <h5 id="d28">Robot Faults</h5>
+            </div>
+            <div class="col-xs-6">
+              <h2 style="text-align:center">Blue Alliance</h2>
+              <h4>Alliance Information</h4>
+              <h5 id="d1_1">Total points</h5>
+              <h5 id="d2_1">Qualification points</h5>
+              <h5 id="d3_1">Ranking points</h5>
+              <h5 id="d4_1">Park/climbing points</h5>
+              <h5 id="d5_1">Autonomous points</h5>
+              <h5 id="d6_1">Ownership Points</h5>
+              <h5 id="d7_1">Vault Points</h5>
+              <h4>Team Info</h4>
+              <h5 id="d8_1">Team1No</h5>
+              <h5 id="d9_1">Cubes Delivered to Vault</h5>
+              <h5 id="d10_1">Cubes on Scale</h5>
+              <h5 id="d11_1">Cubes on Team Switch</h5>
+              <h5 id="d12_1">Cubes on opponent Switch</h5>
+              <h5 id="d13_1">Climb Status</h5>
+              <h5 id="d14_1">Robot Faults</h5>
+              <hr>
+              <h5 id="d15_1">Team2No</h5>
+              <h5 id="d16_1">Cubes Delivered to Vault</h5>
+              <h5 id="d17_1">Cubes on Scale</h5>
+              <h5 id="d18_1">Cubes on Team Switch</h5>
+              <h5 id="d19_1">Cubes on opponent Switch</h5>
+              <h5 id="d20_1">Climb Status</h5>
+              <h5 id="d21_1">Robot Faults</h5>
+              <hr>
+              <h5 id="d22_1">Team3No</h5>
+              <h5 id="d23_1">Cubes Delivered to Vault</h5>
+              <h5 id="d24_1">Cubes on Scale</h5>
+              <h5 id="d25_1">Cubes on Team Switch</h5>
+              <h5 id="d26_1">Cubes on opponent Switch</h5>
+              <h5 id="d27_1">Climb Status</h5>
+              <h5 id="d28_1">Robot Faults</h5>
+
+            </div>
+          </div>
+        </div>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent bBtnAll" id="back">
+          Back
+        </button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+
+
+  <script type="text/javascript" src="matchInfo.js">
+  </script>
+  </body>
+</html>
